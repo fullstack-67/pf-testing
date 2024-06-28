@@ -12,6 +12,7 @@ describe("Backend", () => {
       // cy.log(JSON.stringify(res));
       console.log(res);
       expect(res.headers).to.have.property("access-control-allow-origin");
+      expect(res.body).to.be.instanceOf(Array);
     });
   });
 });
